@@ -1,0 +1,41 @@
+  <div *ngIf="movie">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card mt-5 mb-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {{ movie.title }}
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="https://image.tmdb.org/t/p/w500/{{ movie.backdropURL }}" class="img-responsive center-block" style="height:100%" alt="{{ movie.title }}">
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <strong>Release Date: </strong> {{ movie.releaseDate | date:'dd-MM-yyyy' }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Slug: </strong> {{ movie.slug }}
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Summary: </strong> {{ movie.plot }}
+                  </li>
+                  
+                  <li class="list-group-item">
+                    <a href="/" target="_self">
+                      Movie Homepage
+                    </a>
+                   
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.card -->
+      </div>
+    </div>
+  </div>
+

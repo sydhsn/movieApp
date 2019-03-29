@@ -1,0 +1,23 @@
+  <div class="row no_m_p" style="margin-top: 20px;">
+    <div class="col-xs-12 col-sm-3 col-md-3"  *ngFor="let items of all_movies | slice:0:12; let i = index;" [ngClass] = "{'clearfix' : i % 3 == 0}">
+      <div  *ngIf="i < 8">
+      <div class="thumbnail img-rounded">
+      <div class="releasedatte">
+          {{ items.releaseDate | date:'mediumDate':'yyyy' }}
+      </div>
+       <img data-src="" alt="100%x200" src="https://image.tmdb.org/t/p/w500{{items.posterURL}}" data-holder-rendered="true" class="img-rounded" style="height: 200px; width: 100%; display: block;">
+        <div class="caption">
+          <ul class="list-group">
+              <li class="list-group-item">{{items.title}}</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Morbi leo risus</li>
+              <li class="list-group-item">Porta ac consectetur ac</li>
+              <li class="list-group-item"> <a routerLink="/movie/{{items._id}}" href="#" class="btn btn-block btn-info">Movie Details</a></li>
+            </ul>
+          
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,8 @@
+.navbar-default {
+    background-color: #0097a7;
+    border-color: #0097a7;
+    color: white;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
